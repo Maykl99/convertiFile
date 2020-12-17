@@ -20,7 +20,7 @@
                     <small id="emailHelp" class="form-text text-muted">L'unico formato file supportato è il jpg</small>
                     <div class="form-group">
                         <input onchange="readURL(this);" name="my_file" id="img" type="file" class="form-control-file" id="exampleFormControlFile1">
-                        <img style="width: 100px; height: 100px;" id="blah" src="#" alt="la tua immagine" />
+                        <img style="width: 100px; height: 100px;" id="images" src="#" alt="la tua immagine" />
                     </div>
                     <!-- bottone di default disabilitato finchè i controlli js non vengono superati --> 
                     <button id="buttonSubmit" type="submit" name="submit" value="Upload" class="btn btn-primary" disabled>Invia</button>
@@ -35,7 +35,7 @@
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    $('#blah').attr('src', e.target.result);
+                    $('#images').attr('src', e.target.result);
                 }
 
                 reader.readAsDataURL(input.files[0]);
